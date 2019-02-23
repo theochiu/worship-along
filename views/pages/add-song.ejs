@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Worship Along - Add Song</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/add-song.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/common.css" />
+    <link rel="stylesheet" type="text/css" href="/vendor/snackbar/snackbar.css" />
+    <link rel="stylesheet" type="text/css" href="/vendor/snackbar/material.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <% include ../partials/nav.ejs %>
+
+    <div class="container centered">
+        <h1>Add a Song</h1>
+        <div class="add-song-form">
+            <div class="title">
+                Title: <input id="title-input" class="title-input" type="text" />
+            </div>
+            <div class="lyrics">
+                Lyrics: <br/>
+                <textarea id="lyrics-input" class="lyrics-input"></textarea>
+            </div>
+            <button class="submit button" id="submit">
+                Submit
+            </button>
+        </div>
+    </div>
+
+    <script src=/vendor/snackbar/snackbar.min.js></script>
+    <script src="/js/add-song.js"></script>
+    <script src="/js/admin-password-check.js"></script>
+</body>
+</html>

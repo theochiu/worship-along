@@ -1,0 +1,121 @@
+div.container {
+    margin: 80px 0;
+    text-align: center;
+}
+
+.song-list {
+    margin-top: 20px;
+}
+
+.song-title {
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: "Verdana", sans-serif;
+    font-size: 20px;
+    padding: 10px 85px;
+    position: relative;
+    width: 100%;
+}
+
+.song-arrow-container {
+    position: absolute;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    left: 20px;
+    top: 50%;
+}
+
+.song-arrow {
+    width: 30px;
+    height: 30px;
+    -webkit-transition: .1s linear all;
+    transition: .1s linear all;
+}
+
+.song-arrow:hover {
+    opacity: .5;
+}
+
+.song-arrow.expanded {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transform-origin: 50% 50% 0px;
+}
+
+.song-container:nth-child(even) .song-title {
+    background-color: lightgray;
+}
+
+.song-container .song-title:hover {
+    background-color: lightblue;
+}
+
+.song-lyrics {
+    display: none;
+    white-space: pre;
+}
+
+h1 {
+    font-family: Verdana, sans-serif;
+    font-size: 40px;
+}
+
+.selected {
+    background: url(/img/checkmark.svg);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: right 55px top 35%;
+    display: inline-block;
+}
+
+.song-search {
+    font-family: Verdana, sans-serif;
+    font-size: 20px;
+
+    height: 30px;
+    width: 250px;
+
+    text-align: center;
+}
+
+.song-hidden {
+    display: none;
+}
+
+.letter-section-hidden {
+    display: none;
+}
+
+.alphabet-nav {
+    position: fixed;
+    right: 0;
+    top: 40px;
+    bottom: 0;
+
+    background-color: #fff;
+    border-left: 1px solid;
+    padding: 15px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.alphabet-nav-letter {
+    padding: 0 15px;
+}
+
+.alphabet-nav-letter:hover {
+    cursor: pointer;
+    opacity: .5;
+}
+
+@media screen and (min-width: 480px) {
+    .song {
+        font-size: 25px;
+    }
+}

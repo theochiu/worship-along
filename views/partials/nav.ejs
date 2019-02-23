@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/nav.css" />
+</head>
+
+<body>
+
+<div class="nav">
+    <div class="nav-container" >
+        <% include room-popover.ejs %>
+
+        <!-- toolbar icon link for currently playing song -->
+		<div class="nav-links nav-links-song">
+            <% if (page === "manage-songs") { %>
+				<a href="/song-list">
+					<img class="toolbar" src="/img/arrow-left.svg" />
+				</a>
+            <% } else if (page === "add-song") { %>
+				<a href="/manage-songs">
+					<img class="toolbar" src="/img/arrow-left.svg" />
+				</a>
+            <% } else { %>
+				<a href="/">
+					<img class="toolbar" src="/img/music-note.png" />
+				</a>
+            <% } %>
+		</div>
+
+		<!-- toolbar icon link for choosing song -->
+		<div class="nav-links nav-links-list">
+            <% if (page === "song-list") { %>
+				<a href="/manage-songs">
+					<img class="toolbar" src="/img/wrench.svg" />
+				</a>
+            <% } else if (page !== "add-song" && page !== "manage-songs") { %>
+				<a href="/song-list">
+					<img class="toolbar" src="/img/book-mark.png" />
+				</a>
+            <% } %>
+		</div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Worship Along - Song List</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/song-list.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/common.css" />
+    <link rel="stylesheet" type="text/css" href="/vendor/snackbar/snackbar.css" />
+    <link rel="stylesheet" type="text/css" href="/vendor/snackbar/material.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <% include ../partials/nav.ejs %>
+
+    <div class="container">
+        <input type="text" class="song-search" placeholder="Search for song"/>
+        <div class="song-list">
+            <% var alphabetMap = {} %>
+            <% results.forEach(function(r) { %>
+                <% if (!alphabetMap[r.name.charAt(0)]) { %>
+                    <div class="letter-section" id="<%= r.name.charAt(0) %>" >
+                        <%= r.name.charAt(0) %>
+                    </div>
+                    <% alphabetMap[r.name.charAt(0)] = true %>
+                <% } %>
+                <div class="song-container" id="<%= r.id%>">
+                    <div class="song-title" data-id="<%= r.id %>" data-title="<%= r.name %>">
+                        <%= r.name %>
+                        <div class="song-arrow-container">
+                            <img class="song-arrow" data-id="<%= r.id %>" src="/img/song-arrow.png" />
+                        </div>
+                    </div>
+                    <div class="song-lyrics"><%- (r.lyrics).replace(/\\r\\n|\\r|\\n/g, '<br />') %></div>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+    <div class="alphabet-nav">
+        <% var alphabetArray = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(""); %>
+        <% alphabetArray.forEach(function(r) { %>
+            <div class="alphabet-nav-letter" data-letter="<%= r %>"><%= r %></div>
+        <% }); %>
+    </div>
+
+    <script src=/vendor/snackbar/snackbar.min.js></script>
+    <script src="/js/song-list.js"></script>
+</body>
+</html>

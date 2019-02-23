@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Worship Along - Manage Songs</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/manage-songs.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/common.css" />
+    <link rel="stylesheet" type="text/css" href="/vendor/snackbar/snackbar.css" />
+    <link rel="stylesheet" type="text/css" href="/vendor/snackbar/material.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <% include ../partials/nav.ejs %>
+
+    <div class="container centered">
+        <h1>Manage Songs</h1>
+        <div class="manage-song-items">
+            <div class="manage-song-item">
+                <a href="/add-song">
+                    <button class="button">Add song</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src=/vendor/snackbar/snackbar.min.js></script>
+    <script src="/js/admin-password-check.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+.room-popover {
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    overflow: hidden;
+    padding: 0 15px;
+    position: absolute;
+    text-overflow: ellipsis;
+    max-width: 50%;
+    white-space: nowrap;
+}
+
+.overlay-prompt {
+    line-height: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+
+.room-popover:hover {
+    background: rgba(0,0,0,.1);
+}
+
+.room-popover-overlay {
+    display: none;
+}
+
+.room-popover-overlay.revealed {
+    background-color: rgba(0,0,0,.5);
+    display: block;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+}
+
+.room-popover-overlay-window {
+    background-color: #efefef;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 15px;
+
+    height: 140px;
+    max-width: 340px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.overlay-text {
+    font-size: 20px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.overlay-submit {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+
+
+
+
+.overlay-submit:hover {
+    background-color: green;
+}
+
+.room-popover-overlay-window .ui-effects-wrapper {
+    display:inline;
+}
+
+@media screen and (min-width: 480px) {
+    .room-popover {
+        font-size: 20px;
+    }
+}

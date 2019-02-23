@@ -1,0 +1,28 @@
+.title {
+    padding-bottom: 15px;
+}
+
+.title-input {
+    border: solid 1px #dcdcdc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    padding: 10px;
+    transition: box-shadow 0.3s, border 0.3s;
+    width: 100%;
+}
+
+.lyrics {
+    padding-bottom: 5px;
+}
+
+.lyrics-input {
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    height: 500px;
+    padding: 10px;
+    resize: none;
+    width: 100%;
+}
